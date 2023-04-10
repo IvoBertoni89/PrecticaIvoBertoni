@@ -12,6 +12,10 @@ numero_04 = "132"
 
 # COMPLETAR - INICIO
 
+suma_de_numeros = int(numero_01) + int(numero_02) + int(numero_03) + int(numero_04)
+
+print("La suma de los números es:", suma_de_numeros)
+
 # COMPLETAR - FIN
 
 assert suma_de_numeros == 1500
@@ -26,6 +30,11 @@ numero_02 = 456
 numero_03 = 789
 
 # COMPLETAR - INICIO
+
+suma_de_numeros_string = str(numero_01) + str(numero_02) + str(numero_03)
+
+print("La concatenación de los números es:", suma_de_numeros_string)
+
 
 # COMPLETAR - FIN
 
@@ -43,6 +52,14 @@ numero_hexadecimal = "0x6f540"
 
 # COMPLETAR - INICIO
 
+entero_binario = int(numero_binario, 2)
+entero_octal = int(numero_octal, 8)
+entero_hexadecimal = int(numero_hexadecimal, 16)
+
+multiplicacion_de_numeros = entero_binario * entero_octal * entero_hexadecimal
+
+print("El producto de los números es:", multiplicacion_de_numeros)
+
 # COMPLETAR - FIN
 
 assert multiplicacion_de_numeros == 44397345600000000
@@ -59,6 +76,13 @@ numero_03 = "0o1234"
 numero_04 = 654
 
 # COMPLETAR - INICIO
+
+entero_01 = int(numero_01)
+entero_02 = int(numero_02,16)
+entero_03 = int(numero_03,16)
+entero_04 = int(numero_04)
+
+resultado_resta = entero_01 - entero_02 - entero_03 - entero_04
 
 # COMPLETAR - FIN
 

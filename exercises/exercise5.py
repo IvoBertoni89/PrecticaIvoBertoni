@@ -12,6 +12,8 @@ variable_03 = "a todos!"
 
 # COMPLETAR - INICIO
 
+strings_concatenados = "{}{}{}".format(variable_01, variable_02, variable_03)
+
 # COMPLETAR - FIN
 
 assert strings_concatenados == "¡Buenos días a todos!"
@@ -29,6 +31,8 @@ usar operadores).
 
 # COMPLETAR - INICIO
 
+strings_concatenados = "¡Mamá " "estoy concatenando " "strings!"
+
 # COMPLETAR - FIN
 
 assert strings_concatenados == "¡Mamá estoy concatenando strings!"
@@ -45,6 +49,8 @@ variable_02 = 600
 variable_03 = " pesos a un amigo."
 
 # COMPLETAR - INICIO
+
+strings_concatenados = variable_01 + str(variable_02) + variable_03
 
 # COMPLETAR - FIN
 
@@ -65,6 +71,8 @@ variable_05 = "Ezequiel"
 
 # COMPLETAR - INICIO
 
+strings_concatenados = " {} {}{}{} . Se llama {}.".format(variable_01, str(variable_02), variable_03, variable_04, variable_05)
+
 # COMPLETAR - FIN
 
 assert (
@@ -79,10 +87,12 @@ Restricción: Utilizar f-Strings.
 
 variable_01 = "Le pagué "
 variable_02 = 2
-variable_03 = " pesos que le debía a Ezequiel, me faltan $"
+variable_03 = " pesos que le debía a Ezequiel, me faltan $ "
 variable_04 = 4
 
 # COMPLETAR - INICIO
+
+f"{variable_01}{variable_02}{variable_03}{variable_04}"
 
 # COMPLETAR - FIN
 

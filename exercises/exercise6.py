@@ -6,7 +6,13 @@ Restricción: Utilizar el método append
 """
 
 # COMPLETAR - INICIO
-lista_01 = 
+
+lista_01 = []
+lista_01.append(4)
+lista_01.append("A")
+lista_01.append(False)
+lista_01.append(0.69)
+
 # COMPLETAR - FIN
 
 assert len(lista_01) == 4
@@ -20,6 +26,8 @@ Restricción: Utilizar el método pop
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
+
+lista[3]
 
 # COMPLETAR - FIN
 
@@ -37,6 +45,8 @@ lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
 
+listas_concatenadas_01 = lista_a + lista_b + lista_c
+
 # COMPLETAR - FIN
 
 assert listas_concatenadas_01 == [1, 2, 3, "4", "5", "6", "siete", "ocho", "nueve"]
@@ -52,6 +62,8 @@ lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
 
+lista_nueva = lista_nueva[:2] + [variable_01] + lista_nueva[2:]
+
 # COMPLETAR - FIN
 
 assert lista_nueva == [0, 1, 2, 3, 4]
@@ -65,6 +77,8 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, 42, 81, 6, "la"]
 
 # COMPLETAR - INICIO
+
+lista_primero_y_ultimo = [lista[0], lista[5]]
 
 # COMPLETAR - FIN
 
@@ -80,6 +94,8 @@ lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
 
+lista_primeros = [lista[0], lista[1], lista[2]]
+
 # COMPLETAR - FIN
 
 assert lista_primeros == ["ho", 3.1416, "la"]
@@ -93,6 +109,11 @@ Restricción: Utilizar indexado múltiple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
+
+lista_primeros = []
+lista_primeros.append(lista.pop(0))
+lista_primeros.append(lista.pop(1))
+lista_primeros.append(lista.pop(2))
 
 # COMPLETAR - FIN
 
@@ -109,6 +130,12 @@ lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
 
+lista_primeros_y_ultimos = []
+lista_primeros_y_ultimos.append(lista[0])
+lista_primeros_y_ultimos.append(lista[1])
+lista_primeros_y_ultimos.append(lista[-1])
+lista_primeros_y_ultimos.append(lista[-2])
+
 # COMPLETAR - FIN
 
 assert lista_primeros_y_ultimos == ["ho", "la", "como", "estas?"]
@@ -124,6 +151,8 @@ lista_02 = [5, 6]
 
 # COMPLETAR - INICIO
 
+lista_concatenada = lista_01.extend(lista_02)
+
 # COMPLETAR - FIN
 
 assert lista_concatenada == [0, 1, 2, 3, 5, 6]
@@ -137,6 +166,9 @@ Restricción: Utiliar el operador *
 lista_01 = [0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
+
+ for i in range(3):
+    lista_duplicada.extend(lista_01)
 
 # COMPLETAR - FIN
 
@@ -153,6 +185,8 @@ lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
 
+variable_booleana = any(x == elemento for x in lista)
+
 # COMPLETAR - FIN
 
 assert variable_booleana
@@ -167,6 +201,15 @@ lista_01 = [1, 2, 3, 4.5, 6, 7]
 lista_02 = [1, 3, 2, 4, 5, 6, 7]
 
 # COMPLETAR - INICIO
+
+son_iguales = True 
+if len(lista_01) != len(lista_02):
+    son_iguales = False
+else:
+     for i in range(len(lista_01)):
+        if lista_01[i] != lista_02[i]:
+            son_iguales = False
+            break
 
 # COMPLETAR - FIN
 
@@ -184,6 +227,8 @@ notas = [False, False, False, False, False, False, False, False, False]
 
 # COMPLETAR - INICIO
 
+no_tiene_examenes_aprobados = all(notas)
+
 # COMPLETAR - FIN
 
 assert no_tiene_examenes_aprobados
@@ -199,6 +244,12 @@ Restricción: Utilizar el método all
 notas = [True, True, False, True, True, True, True, True, True, True, True, True]
 
 # COMPLETAR - INICIO
+
+tiene_todo_aprobado = True
+if nota in notas:
+    if not nota:
+        tiene_todo_aprobado = False
+        break
 
 # COMPLETAR - FIN
 
